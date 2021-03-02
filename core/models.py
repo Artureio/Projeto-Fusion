@@ -44,6 +44,13 @@ class Cargo(Base):
     def __str__(self):
         return self.cargo
 
+class Recursos(Base):
+
+
+    class Meta:
+        verbose_name = 'Recurso'
+        verbose_name_plural = 'Recursos'
+
 
 class Funcionario(Base):
     nome = models.CharField('Nome', max_length=100)
