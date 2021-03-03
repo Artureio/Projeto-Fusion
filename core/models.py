@@ -44,12 +44,27 @@ class Cargo(Base):
     def __str__(self):
         return self.cargo
 
-class Recursos(Base):
 
+class Recursos(Base):
+    ICONES = (
+        ('lni-rocket', 'Foguete'),
+        ('laptop-phone', 'Responsivo'),
+        ('lni-cog', 'Configuração'),
+        ('lni-leaf', 'Sustentável'),
+        ('lni-layers', 'Design'),
+        ('lni-mobile', 'Mobile'),
+    )
+
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.CharField('Descrição', max_length=200)
+    icone = models.CharField('Ícone', max_length=40, choices=ICONES)
 
     class Meta:
         verbose_name = 'Recurso'
         verbose_name_plural = 'Recursos'
+
+    def __str__(self):
+        return self.titulo
 
 
 class Funcionario(Base):
@@ -63,8 +78,8 @@ class Funcionario(Base):
     instagram = models.CharField('Instagram', max_length=100, default='#')
 
     class Meta:
-        verbose_name ='Funcionário'
-        verbose_name_plural ='Funcionários'
+        verbose_name = 'Funcionário'
+        verbose_name_plural = 'Funcionários'
 
     def __str__(self):
         return self.nome

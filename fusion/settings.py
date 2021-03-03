@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fusion',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'art080859',
         'HOST': 'localhost',
         'PORT': '5432'
     }
@@ -124,3 +124,15 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Email teste console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+"""
+# Email produção
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'usuário@usuário.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = 'senhadoemail'
+DEFAULT_FROM_EMAIL = 'contato@mail.com
+"""

@@ -2,7 +2,7 @@
 <section id="features" class="section-padding">
     <div class="container">
         <div class="section-header text-center">
-            <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Awesome Features</h2>
+            <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Recursos :</h2>
             <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
 
@@ -10,20 +10,22 @@
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 
                 <!--Inicio dos items da esquerda-->
-                <!--Ideal: 3 cada lado-->
+                <!--Ideal: 2 em cada lado-->
                 <div class="content-left">
-
-                    <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
+                <!--Para dividir 3 instâncias em cada coluna,
+                 utilizei o método slice:'3'-->
+                    {% for recurso in recursos|slice:':3' %}
+                        <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
                         <span class="icon">
-                            <i class="lni-rocket"></i>
+                            <i class="{{ recurso.icone }}"></i>
                         </span>
-                        <div class="text">
-                            <h4>Bootstrap 4 Based</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <div class="text">
+                                <h4>{{ recurso.titulo }}</h4>
+                                <p>{{ recurso.descricao }}</p>
+                            </div>
                         </div>
-                    </div>
-
-                <!--Fim itens da esquerda-->
+                    {% endfor %}
+                    <!--Fim itens da esquerda-->
                 </div>
 
             </div>
@@ -39,36 +41,24 @@
 
             <!--Coluna direita-->
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-
+                <!--Início item direito-->
                 <div class="content-right">
-                    <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-                <span class="icon">
-                  <i class="lni-leaf"></i>
-                </span>
-                        <div class="text">
-                            <h4>Modern Design</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                    {% for recurso in recursos|slice:'3:' %}
+
+
+
+                        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
+                        <span class="icon">
+                          <i class="{{ recurso.icone }}"></i>
+                        </span>
+                            <div class="text">
+                                <h4>{{ recurso.titulo }}</h4>
+                                <p>{{ recurso.descricao }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
-                <span class="icon">
-                  <i class="lni-layers"></i>
-                </span>
-                        <div class="text">
-                            <h4>Multi-purpose Template</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </div>
-                    <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
-                <span class="icon">
-                  <i class="lni-leaf"></i>
-                </span>
-                        <div class="text">
-                            <h4>Working Contact Form</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </div>
-                </div>
+                    {% endfor %}
+                </div><!--Fim item direito-->
+
             </div>
         </div>
     </div>

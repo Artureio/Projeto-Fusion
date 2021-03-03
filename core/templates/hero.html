@@ -1,19 +1,29 @@
 {% load static %}
     <div id="hero-area" class="hero-area-bg">
         <div class="container">
+                    <!--Bloco de confirmação de e-mail-->
+                    {% if messages %}
+                        {% for m in messages %}
+                            <div class="alert alert-{{ m.tags }}">
+                                <button type="button" class="close" data-dismiss="alert"></button>
+                                <strong>{{ m }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+
             <div class="row">
                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                     <div class="contents">
                         <h2 class="head-title">Projeto Fusion<br> Soluções no seu orçamento </h2>
                         <p>
-                            Projeto ficcional onde, a partir de um template bootstrap, implementei alguns experimentos
+                            Projeto ficcional onde, a partir de um template bootstrap, implemento alguns experimentos
                             com o
-                            framework Django, não usados em projetos anteriores, como: Class Based Views, Block Content,
+                            framework Django, não usados em meus projetos anteriores, como: Class Based Views, Block Content,
                             Context Manager e outros.
                         </p>
                         <div class="header-button">
-                            <a href="#" class="btn btn-common">Saiba mais</a>
-                            <a href="#" class="btn btn-border video-popup">Entre em contato</a>
+                            <a href="https://github.com/Artureio/fusion" class="btn btn-common">Ver Repositório</a>
                         </div>
                     </div>
                 </div>
