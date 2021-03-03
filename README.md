@@ -19,7 +19,7 @@
 - Contato(*forms.py , views.py, settings.py*):
   -	Encarreguei a classe EmailMessage, do pacote django.core.mail.message, para fazer o trabalho pesado. :smile:
 
-Considerações finais sobre o projeto:
-Estou gostando bastante de aprender mais sobre o framework e busco a cada dia melhorar com ele. 
-Me desafiei a utilizar a view baseada em Class, ao invés de funções, e foi um caminho sem volta. A partir de agora, sempre farei dessa forma :smile:
-Este lindo template foi baixado [UIDeck](http://uideck.com "UIDeck")
+- Considerações finais sobre o projeto:
+  - Estou gostando bastante de aprender mais sobre o framework e busco a cada dia melhorar com ele. 
+  - Me desafiei a utilizar a view baseada em Class, ao invés de funções, e foi um caminho sem volta. A partir de agora, sempre farei dessa forma :smile:
+  - Este lindo template foi baixado [UIDeck](http://uideck.com "UIDeck")
