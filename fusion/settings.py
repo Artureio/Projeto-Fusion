@@ -25,7 +25,7 @@ SECRET_KEY = 'iue$a#fw^!vi)p%kh85@rrbl@&)kt75r)njys5(oak*i1f-so%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://fusion-al.herokuapp.com/',]
 
 # Application definition
 
