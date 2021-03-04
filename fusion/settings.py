@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,15 +75,23 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# configuração DB Local
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fusion',
         'USER': 'postgres',
-        'PASSWORD': '*********',
+        'PASSWORD': '*******',
         'HOST': 'localhost',
         'PORT': '5432'
     }
+}
+"""
+
+# configuração DB Heroku
+DATABASES = {
+    'default': dj_database_url.config()
 }
 
 # Password validation
@@ -125,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email teste console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email produção
@@ -136,3 +145,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = 'senhadoemail'
 DEFAULT_FROM_EMAIL = 'contato@mail.com
 """
+# Ao deslogar do painel administrador, redireciona para a view 'index'
+LOGOUT_REDIRECT_URL = 'index'
