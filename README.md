@@ -1,6 +1,6 @@
 # Projeto Fusion 
 ****Projeto ficcional onde, a partir de um template bootstrap, implemento alguns experimentos com práticas do framework py Django.****
-
+**[Link externo](https://fusion-al.herokuapp.com/)**
 <hr>Aqui, separados por seções do site, explicarei, de forma superficial, o uso do Django nelas.
 
 - Base:
