@@ -19,6 +19,13 @@
 - Contato(*forms.py , views.py, settings.py*):
   -	Encarreguei a classe EmailMessage, do pacote django.core.mail.message, para fazer o trabalho pesado. :smile:
 
+- Bibliotecas externas instaladas no projeto:
+    ```
+    - dj-static==0.0.6
+    - psycopg2-binary==2.8.6
+    - django-stdimage==5.1.1
+    - gunicorn==20.0.4
+    ```
 - Considerações finais sobre o projeto:
   - Estou gostando bastante de aprender mais sobre o framework e busco a cada dia melhorar com ele. 
   - Me desafiei a utilizar a view baseada em Class, ao invés de funções, e foi um caminho sem volta. A partir de agora, sempre farei dessa forma :smile:
